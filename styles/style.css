@@ -5,15 +5,15 @@
 }
 
 :root {
-  --primary-color: #3d1c00; 
+  --primary-color: #1b078d; 
   --secondary-color: #bb7f7f; 
-  --accent-color: #411e02;
+  --accent-color: #07556d;
   --text-color-light: #b9b9b9; 
-  --text-color-dark: #01010a;
+  --text-color-dark: #06065e;
   --light-collor: #fff;
 
-  --nav-btn-light: #e4e2e2;
-  --nav-btn-dark: #ddd;
+  --nav-btn-light: #e5f0f3;
+  --nav-btn-dark: #e7ebec;
 }
 
 body{
@@ -29,7 +29,7 @@ body{
   justify-content: space-around;
   gap: 2px;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 40px;
 }
 
@@ -135,82 +135,25 @@ body{
 
 
 
+
 .resort-gallery{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin-left: 50px;
   gap: 32px; 
   overflow-x: auto; 
   padding-bottom: 20px; 
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  overflow-x: hidden;
-
 }
 
-.resort-gallery_element{
-  flex: 0 0 300px; 
-  scroll-snap-align: start; 
-  background-color: var(--light-collor);
-  border-radius: 15px;
-  padding-bottom: 20px;
-}
 
-.resort-gallery__photo-block {
-  position: relative; 
-  width: 290px;
-  height: 380px;
-  padding-bottom: 60%; 
-  overflow: hidden; 
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-radius: 40px;
-}
-
-.resort-gallery_photo{
-  position: absolute; 
-  inset: 0; 
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  object-position: center; 
+.resort-gallery_element {
+  width: 300px;
+  height: 350px;
   border-radius: 30px;
+  object-fit: cover; 
+  object-position: center;
 }
 
-
-.badge {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: var(--light-collor);
-  display: flex;
-  align-items: flex-end;
-  gap: 12px;
-  z-index: 10; 
-  font-weight: normal;
-}
-
-.badge.popular {
-  background-color: #FEE2E2; 
-  color: #EF4444;
-}
-
-.badge.new-house {            /*EDIT */
-  background-color: #DBEAFE; 
-  color:#1D4ED8;
-}
-
-.badge.best-deals {
-  background-color: #D1FAE5; 
-  color: #047857;
-}
-
-.photo-block__icon{
-  width: 15px;
-}
 
 
 .resort-gallery__text{
@@ -219,18 +162,6 @@ body{
   margin: 20px 20px 5px 20px;
 }
 
-.resort-gallery__text h3{
-  font-size: 23px;
-  font-weight: normal;
-  margin-bottom: 13px;
-}
-
-.resort-gallery__text p{
-  font-size: 18px;
-  font-weight: normal;
-  color: #333333;
-
-}
 
 
 @media (max-width: 768px) {
@@ -251,7 +182,7 @@ body{
   }
 
   .resort-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
 

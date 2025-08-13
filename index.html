@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="icon" href="accets/images/logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="accets/images/logo.svg" type="image/x-icon">
+
+</head>
+<body>
+    <div class="gallery-block">
+        <div class="navigation">
+            <div class="navigation_text">                                  
+                <p>Eurotrip company</p>
+                <h1>Choose your best vacation!</h1>
+            </div>
+
+            <div class="navigation_sort-resort">
+                <button class="type-button" data-category ="popular-resort"> <!--edit src-->
+                    <img src="accets/images/house-icon.svg" alt="photo"> Popular
+                </button>
+                <button class="type-button">
+                    <img src="accets/images/villa-icon.svg" alt="photo" data-category ="new-resort"> New 
+                </button>
+                <button class="type-button">
+                    <img src="accets/images/apartment-icon.svg" alt="photo" data-category ="budget-resort"> Budget 
+                </button>       
+            </div>
+
+            <div class="navigation_buttons">
+                <button class="nav-button nav-button-back">&lt;</button> 
+                <button class="nav-button nav-button-next">&gt;</button> 
+            </div>
+        </div>
+                
+
+        <section class="resort-gallery">
+            <!--Fitst Block-->
+            <div class="resort-gallery_element" data-category ="popular-resort"> 
+                <div class="resort-gallery__photo-block">
+                    <img src="accets/images/maldivy.jpg" alt="resort-photo" class="resort-gallery_photo">
+                    <span class="badge popular"><img src="accets/images/icon-popular.svg" alt="icon" class="photo-block__icon">Popular</span>
+                </div>
+                    
+                <div class="resort-gallery__text">               
+                    <h3>Roselands House</h3>
+                    <p>$ 35.000.000</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

@@ -7,16 +7,28 @@ export default class GalleryView{
     }
 
     createGallery(images) {
-      this.galleryElement.innerHTML = '';
+      
+        this.galleryElement.innerHTML = '';
 
-      images.forEach(img => {
-        const imageElem = document.createElement('img'); 
-        imageElem.src = img.url;
-        imageElem.alt = img.title;
-        imageElem.setAttribute('data-category', img.category);
-        imageElem.classList.add('resort-gallery_element'); /*----- */
-        this.galleryElement.appendChild(imageElem);
-      });
+      
+        images.forEach(img => {
+            const cardContainer = document.createElement('div');
+            cardContainer.classList.add('card-container'); 
+            
+            const imageElem = document.createElement('img');
+            imageElem.src = img.url;
+            imageElem.alt = img.title;
+            imageElem.classList.add('resort-gallery__element'); 
+            imageElem.setAttribute('data-category', img.category);
+
+            const titleElem = document.createElement('p');
+            titleElem.classList.add('resort-gallery__text'); 
+            titleElem.textContent = img.title;
+
+            cardContainer.appendChild(imageElem);
+            cardContainer.appendChild(titleElem);
+            this.galleryElement.appendChild(cardContainer);
+        });
     }
   
     filterClick(handler) {

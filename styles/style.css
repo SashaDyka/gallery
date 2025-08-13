@@ -5,51 +5,50 @@
 }
 
 :root {
-    --primary-color: #3d1c00; 
-    --secondary-color: #bb7f7f; 
-    --accent-color: #411e02;
-    --text-color-light: #b9b9b9; 
-    --text-color-dark: #01010a;
-    --light-collor: #fff;
+  --primary-color: #3d1c00; 
+  --secondary-color: #bb7f7f; 
+  --accent-color: #411e02;
+  --text-color-light: #b9b9b9; 
+  --text-color-dark: #01010a;
+  --light-collor: #fff;
 
-    --nav-btn-light: #e4e2e2;
-    --nav-btn-dark: #ddd;
+  --nav-btn-light: #e4e2e2;
+  --nav-btn-dark: #ddd;
 }
 
 body{
-    position: relative;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0;
-    overflow-x: hidden;
-    /*background-color: #c4dfe2;*/
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .navigation{
-    display: flex;
-    justify-content: space-around;
-    gap: 2px;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  gap: 2px;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .navigation_text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 
 .navigation_text h1{
-    font-size: 32px;
-    color: var(--text-color-dark);
+  font-size: 32px;
+  color: var(--text-color-dark);
 }
 
 .navigation_text p{
-    font-size: 16px;
-    color: var(--accent-color);
-    margin-bottom: 5px;
+  font-size: 16px;
+  color: var(--accent-color);
+  margin-bottom: 5px;
 }
 
 
@@ -95,15 +94,15 @@ body{
 }
 
 .nav-button {
-    width: 63px;
-    height: 52px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: #000000;
-    cursor: pointer;
+  width: 63px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #000000;
+  cursor: pointer;
 }
 
 .nav-button-back{
@@ -137,62 +136,61 @@ body{
 
 
 .resort-gallery{
-    display: flex;
-    margin-left: 50px;
-    gap: 32px; 
-    overflow-x: auto; 
-    padding-bottom: 20px; 
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    overflow-x: hidden;
+  display: flex;
+  margin-left: 50px;
+  gap: 32px; 
+  overflow-x: auto; 
+  padding-bottom: 20px; 
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  overflow-x: hidden;
 
 }
 
 .resort-gallery_element{
-    flex: 0 0 300px; 
-    scroll-snap-align: start; 
-    background-color: var(--light-collor);
-    border-radius: 15px;
-    overflow: hidden; 
-    padding-bottom: 20px;
+  flex: 0 0 300px; 
+  scroll-snap-align: start; 
+  background-color: var(--light-collor);
+  border-radius: 15px;
+  padding-bottom: 20px;
 }
 
 .resort-gallery__photo-block {
-    position: relative; 
-    width: 320px;
-    height: 380px;
-    padding-bottom: 60%; 
-    overflow: hidden; 
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-radius: 40px;
+  position: relative; 
+  width: 290px;
+  height: 380px;
+  padding-bottom: 60%; 
+  overflow: hidden; 
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-radius: 40px;
 }
 
 .resort-gallery_photo{
-    position: absolute; 
-    inset: 0; 
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: center; 
-    border-radius: 30px;
+  position: absolute; 
+  inset: 0; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+  border-radius: 30px;
 }
 
 
 .badge {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--light-collor);
-    display: flex;
-    align-items: flex-end;
-    gap: 12px;
-    z-index: 10; 
-    font-weight: normal;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--light-collor);
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 10; 
+  font-weight: normal;
 }
 
 .badge.popular {
@@ -216,20 +214,50 @@ body{
 
 
 .resort-gallery__text{
-    font-size: 20px;
-    font-weight: bold;
-    margin: 20px 20px 5px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 20px 5px 20px;
 }
 
 .resort-gallery__text h3{
-    font-size: 23px;
-    font-weight: normal;
-    margin-bottom: 13px;
+  font-size: 23px;
+  font-weight: normal;
+  margin-bottom: 13px;
 }
 
 .resort-gallery__text p{
-    font-size: 18px;
-    font-weight: normal;
-    color: #333333;
+  font-size: 18px;
+  font-weight: normal;
+  color: #333333;
+
+}
+
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .navigation_sort-resort {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .navigation_buttons {
+    margin-top: 20px;
+  }
+
+  .resort-gallery {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .resort-gallery_element {
+    width: 90%;
+    margin: 0 auto;
+  }
 
 }

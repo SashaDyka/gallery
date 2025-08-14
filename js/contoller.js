@@ -14,9 +14,15 @@ export default class GalleryController {
     }
 
     handleFilter(category) {
-        console.log(`Filter by category: ${category}`);
-        const filteredCards = this.model.getImagesByCategory(category);
-        this.view.createGallery(filteredCards);
+        let filteredImages;
+
+        if (category === 'all') {
+            filteredImages = this.model.getAllImages(); 
+            } else {
+            filteredImages = this.model.getImagesByCategory(category);
+        }
+        
+        this.view.createGallery(filteredImages);
         this.view.resetScroll();
     }
 

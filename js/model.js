@@ -14,6 +14,7 @@ export default class GalleryModel{
     }
   }
 
+
   getImagesByCategory(category) {
     if (category === 'all') {
       return this.images; 
@@ -22,6 +23,9 @@ export default class GalleryModel{
     }
   }
 
+  getAllImages() {
+    return this.images;
+  }
     
 }
   

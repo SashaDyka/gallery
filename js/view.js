@@ -7,37 +7,48 @@ export default class GalleryView{
     }
 
     createGallery(images) {
-      
-        this.galleryElement.innerHTML = '';
+      images.forEach(img => {
+        const cardContainer = document.createElement('div');
+        cardContainer.classList.add('card-container'); 
+        
+        const imageElem = document.createElement('img');
+        imageElem.src = img.url;
+        imageElem.alt = img.title;
+        imageElem.classList.add('resort-gallery__element'); 
+        imageElem.setAttribute('data-category', img.category);
 
-      
-        images.forEach(img => {
-            const cardContainer = document.createElement('div');
-            cardContainer.classList.add('card-container'); 
-            
-            const imageElem = document.createElement('img');
-            imageElem.src = img.url;
-            imageElem.alt = img.title;
-            imageElem.classList.add('resort-gallery__element'); 
-            imageElem.setAttribute('data-category', img.category);
+        const titleElem = document.createElement('p');
+        titleElem.classList.add('resort-gallery__text'); 
+        titleElem.textContent = img.title; /* add discr*/
 
-            const titleElem = document.createElement('p');
-            titleElem.classList.add('resort-gallery__text'); 
-            titleElem.textContent = img.title;
-
-            cardContainer.appendChild(imageElem);
-            cardContainer.appendChild(titleElem);
-            this.galleryElement.appendChild(cardContainer);
-        });
-    }
+        cardContainer.appendChild(imageElem);
+        cardContainer.appendChild(titleElem);
+        this.galleryElement.appendChild(cardContainer);
+      });
+  }
   
-    filterClick(handler) {
-        const filterButtons = document.querySelectorAll('.type-button');
-        filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.getAttribute('data-category');
-            handler(category); 
-        });
+
+
+  setScrollEndEventListener() {
+    window.addEventListener('scroll', async () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+
+        if (scrollTop + windowHeight >= docHeight - 50) {
+
+        }
+    });
+  }
+
+  
+  filterClick(handler) {
+      const filterButtons = document.querySelectorAll('.type-button');
+      filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        handler(category); 
+      });
     });
   }
 

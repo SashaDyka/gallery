@@ -88,7 +88,6 @@ body{
 }
 
 
-
 .resort-gallery{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -157,5 +156,12 @@ body{
    .resort-gallery {
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
+  }
+
+  .navigation__text{
+    font-size: 10px;
+  }
+  .navigation__sort-resort{
+    display: flex;
   }
 }
